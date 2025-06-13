@@ -15,6 +15,7 @@ import * as Github from './sites/github';
 import * as LinkedIn from './sites/linkedin';
 import * as Instagram from './sites/instagram';
 import * as YouTube from './sites/youtube';
+import * as MetaThreads from './sites/meta-threads';
 import { createStore, Store } from './store';
 
 const store = createStore();
@@ -39,6 +40,10 @@ export function eradicate(store: Store) {
 		FbClassic.eradicate(store);
 	} else {
 		Fb2020.eradicate(store);
+	}
+
+	if (MetaThreads.checkSite()) {
+		MetaThreads.eradicate(store);
 	}
 }
 
