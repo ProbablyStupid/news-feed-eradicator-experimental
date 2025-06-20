@@ -1,3 +1,6 @@
+### General
+[ ] - Makefile support for firefox (incorrect manifest.json currently gets moved)
+
 ### Implementations
 [ ] - Threads
 [ ] - Google News
