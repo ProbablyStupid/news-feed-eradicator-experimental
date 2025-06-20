@@ -138,6 +138,8 @@ export const registerContentScripts: BackgroundEffect =
 			const siteIds = Object.keys(state.settings.sites) as SiteId[];
 			const siteMatches = siteIds.flatMap((siteId) => Sites[siteId].origins);
 
+			console.log(siteIds, siteMatches);
+
 			await browser.scripting.registerContentScripts([
 				{
 					id: 'intercept',

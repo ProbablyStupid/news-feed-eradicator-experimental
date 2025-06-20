@@ -33,7 +33,12 @@ export function start(container: Node | null) {
 		},
 	});
 
+	console.log("Thirty!");
+	console.log("Store!! : ", store);
+	console.log(store.getState());
+
 	const render = () => {
+		console.log("rendering!");
 		const newVnode = h('div#options-container', [InfoPanel(store)]);
 
 		patch(vnode, newVnode);

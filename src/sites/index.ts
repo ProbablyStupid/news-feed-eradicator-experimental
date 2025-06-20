@@ -11,7 +11,8 @@ export type SiteId =
 	| 'linkedin'
 	| 'youtube'
 	| 'instagram'
-	| 'github';
+	| 'github'
+	| 'threads';
 
 export const Sites: Record<SiteId, Site> = {
 	facebook: {
@@ -97,6 +98,12 @@ export const Sites: Record<SiteId, Site> = {
 		origins: ['https://github.com/*'],
 		css: githubCss,
 	},
+	threads: {
+		label: 'Threads',
+		domain: ['threads.com'],
+		paths: ['/'],
+		origins: ['https://www.threads.com/*'],
+	}
 };
 
 export type Site = {

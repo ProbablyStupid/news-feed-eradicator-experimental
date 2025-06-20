@@ -42,8 +42,13 @@ export function eradicate(store: Store) {
 		Fb2020.eradicate(store);
 	}
 
+	console.log("checking meta threads!");
 	if (MetaThreads.checkSite()) {
+		console.log("yes, it is meta threads!");
 		MetaThreads.eradicate(store);
+	}
+	else {
+		console.log("no meta threads!");
 	}
 }
 
